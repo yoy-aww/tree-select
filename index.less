@@ -1,0 +1,52 @@
+@border_color: #E8E8E8;
+.my-select {
+    position: relative;
+    .my-value {
+        border: 1px solid @border_color;
+        padding: 0 10px;
+        height: 100%;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 12px;
+        color: blue;
+        border-radius: 4px 0 0 4px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .my-option {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        height: 100%;
+        width: 100%;
+        border: 1px solid @border_color;
+        border-top-style: none;
+        dl {
+            height: 100%;
+            margin: 0;
+            dd {
+                display: flex;
+                align-items: center;
+                background-color: #fff;
+                padding-left: 10px;
+                height: 100%;
+                width: 100%;
+                box-sizing: border-box;
+                cursor: pointer;
+                font-size: 12px;
+                margin: 0;
+                border: 1px #f7f7f7;
+                border-style: none solid solid ;
+            }
+            dd:hover {
+                background: #f6f6f6;
+            }
+        }
+    }
+}
+
+.my-select:focus .my-option {
+    display: block;
+}
